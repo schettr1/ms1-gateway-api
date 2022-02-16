@@ -1,4 +1,8 @@
 # MICROSERVICES -
+Microservices are small independent services that communicate over well-defined APIs. 
+Because these services can be run independently, even if one service goes down, other services keep running. 
+It provides loose coupling and better scalability. <br></br>
+
 ---
 ## Components
 ```bash
@@ -12,7 +16,7 @@ ms1_email_service
 ---
 
 ## Pre-requisite
-Kafka Servers (Zookeeper and Kafka) must be started and running before microservices.
+Kafka Servers (both Zookeeper and Kafka) must be started and running before Kafka producer and consumer microservices are run.
 
 ---
 
@@ -32,15 +36,15 @@ EMAIL-SERVICE listens/subscribes to the message from Apache Kafka, de-serializes
 ## Steps 
 1. Start config server and go to URL [http://localhost:8888/config-server/default](http://localhost:8888/config-server/default). The page should load information from git repository. <br></br>
 2. Start Discovery Eureka Server and monitor run status or below services at URL [http://localhost:8083/](http://localhost:8083/) <br></br>
-3. Start gateway_api. <br></br>
+3. Start Gateway_API. <br></br>
 4. Start Zookeeper and Kafka servers in following order. Kafka server by default runs on port 2181. RabbitMQ does not require to startup server separately.<br></br>
 <ul>
 <li><i>C:\Users\suny4\apache-kafka_2.12-2.7.0>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties </i></li>      
 <li><i>C:\Users\suny4\apache-kafka_2.12-2.7.0>.\bin\windows\kafka-server-start.bat .\config\server.properties </i></li>
 </ul>      
 
-5. Then, start registration, email and payment services. <br></br>
-6. Testing API/sending HTTP request using POSTMAN. <br></br>
+5. Then start Registration, Email and Payment Services. <br></br>
+6. Testing API using POSTMAN. <br></br>
 <ul>
 <li>POST: [http://localhost:8081/register/employees](http://localhost:8081/register/employees) </li>      
 <li>BODY: </li>
