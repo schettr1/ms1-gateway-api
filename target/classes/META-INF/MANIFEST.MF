@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: ms1_gateway_api
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: suny4
+Implementation-Vendor-Id: com.sbc
+Build-Jdk: 1.8.0_202
+Implementation-URL: https://spring.io/projects/spring-boot/ms1_gateway
+ _api
+Created-By: Maven Integration for Eclipse
+
